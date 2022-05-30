@@ -36,5 +36,4 @@ int[,] square = new int[k,k];
 FillArray(square);
 Console.WriteLine("Такая получилась матрица:");
 PrintArray(square);
-int result = SumOfDiagonal(square);
-Console.WriteLine($"Сумма элементов главной диагонали: {result}");
+Console.WriteLine($"Сумма элементов главной диагонали: {SumOfDiagonal(square)}");
