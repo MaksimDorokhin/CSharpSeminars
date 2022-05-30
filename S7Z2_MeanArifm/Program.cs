@@ -36,5 +36,5 @@ int[,] matrix = new int[n, k];
 FillArray(matrix);
 Console.WriteLine("Полученный массив: ");
 PrintArray(matrix);
-for (int j = 0; j < matrix.GetLength(1); j++)
+for (int j = 0; j < k; j++)
     Console.WriteLine($"Среднее арифметическое столбца {j + 1} = {MeanAriphm(matrix, j)}");
