@@ -1,7 +1,7 @@
 ﻿// Составить частотный словарь элементов двумерного массива
 //Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
 
-int Searching(string text, char any)
+int CountCharsInString(string text, char any)
 {
     int count = 0;
     for (int i = 0; i < text.Length; i++)
@@ -14,7 +14,7 @@ int Searching(string text, char any)
     }
     return count;
 }
-string Checking(string text)
+string UniqueCharsInString(string text)
 {
     string newText = string.Empty;
     for (int i = 0; i < text.Length; i++)
@@ -29,14 +29,14 @@ string Checking(string text)
     return newText;
 }
 Console.Clear();
-string text = "Частотный анализ – это один из методов криптоанализа,";
-Console.WriteLine(text);
+Console.WriteLine("Введите текстовую строку:");
+string text = Console.ReadLine() ?? " ";
 double size = text.Length;
 double percent = 0;
-string newText = Checking(text);
+string newText = UniqueCharsInString(text);
 for (int i = 0; i < newText.Length; i++)
 {
-    int count = Searching(text, newText[i]);
+    int count = CountCharsInString(text, newText[i]);
     percent = count / size * 100;
-    Console.WriteLine($"{newText[i]} is in text {count} times. Percent = {Math.Round(percent, 2)} %");
+    Console.WriteLine($"Symbol {newText[i]} is in the text {count} times. Percent = {Math.Round(percent, 2)} %");
 }
