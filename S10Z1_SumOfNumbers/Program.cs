@@ -8,3 +8,10 @@ int RecSum(int num)
 Console.Write("Введите число: ");
 int num = int.Parse(Console.ReadLine() ?? "0");
 Console.WriteLine($"Сумма цифр числа = {RecSum(Math.Abs(num))}");
+
+// С исп. тернарного оператора:
+
+// uint SumDigits(uint n) => n<10 ? n : n%10 + SumDigits(n/10);
+// Console.Write("Enter your number: ");
+// uint n = uint.Parse(Console.ReadLine() ?? "0");
+// Console.WriteLine($"Sum of digits {SumDigits(n)}");
